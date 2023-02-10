@@ -61,6 +61,10 @@ proxy_set()
 	gsettings set org.gnome.system.proxy.http port $2
 	gsettings set org.gnome.system.proxy.https host $1
 	gsettings set org.gnome.system.proxy.https port $2
+	gsettings set org.gnome.system.proxy.ftp host $1
+	gsettings set org.gnome.system.proxy.ftp port $2
+	gsettings set org.gnome.system.proxy.socks host $1
+	gsettings set org.gnome.system.proxy.socks port $2
 	gsettings set org.gnome.system.proxy ignore-hosts "['localhost', '127.0.0.0/8', '::1']"
 # if DE is kde plasma then this will change settings. ESSENTIAL FOR GOOGLE CHROME TO WORK
 	if [ "$DESKTOP_SESSION" = "plasma" ]
